@@ -1,184 +1,889 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8"/>
+    <title>万题库</title>
+    <meta name="description" content="事业单位题库,拥有名师视频解析的智能题库！考证通关大杀器,科学通关,懒人必备！"/>
+    <meta name="keywords" content="事业单位考试,事业单位招聘考试,公务员,公务员考试,公务员题库,国家公务员,事业单位考试题库,国考,申论,行测,事业单位公共基础,编制,公务员万题库,万题库"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+        body {
+            font-size: 12px;
+            font-family: Microsoft YaHei, serif;
+            font-weight: normal;
+            text-decoration: none;
+            width: 100%;
+            margin: 0 auto 0 auto;
+            background: #f5f5f5;
+        }
+
+        BODY,
+        DIV,
+        UL,
+        OL,
+        DL,
+        DT,
+        DD,
+        TABLE,
+        TR,
+        TD,
+        FORM,
+        P,
+        H1,
+        H2,
+        H3,
+        H4,
+        H5,
+        H6,
+        SPAN,
+        FONT,
+        EM,
+        A,
+        IMG {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .con {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /*改版头部样式*/
+
+        .header {
+            height: 86px;
+            background: #FFF;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .header .fl .yuekaoti {
+            margin: 23px 35px 0 0;
+            float: left;
+        }
+
+        .header-right {
+            float: right;
+            color: #e8e8e8;
+            font-size: 14px;
+            margin-top: 38px;
+            text-align: right;
+            margin-right: 80px;
+            line-height: 22px;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .header-right a:link {
+            color: #999;
+        }
+
+        .header-right a:visited {
+            color: #999;
+        }
+
+        .header-right a:hover {
+            color: #55bbdd;
+        }
+
+        .header-right a:active {
+            color: #3385ad;
+        }
+
+        /*banner*/
+        .banner {
+            background: url(bg.png) no-repeat center;
+            height: 521px;
+            border-top: 1px solid #e8e7e7;
+        }
+
+        .banner-left {
+            padding: 287px 0 0 84px;
+            width: 430px;
+            position: relative;
+            float: left;
+        }
+
+        .left_l {
+            float: left;
+        }
+
+        .banner-left .ewm {
+            width: 114px;
+            height: 135px;
+            text-align: center;
+            padding: 10px;
+            line-height: 24px;
+        }
+
+        .banner-left .sys {
+            color: #333333;
+            line-height: 43px;
+            font-size: 13px;
+        }
+
+        .btn {
+            float: left;
+            margin-left: 45px;
+        }
+
+        .btn a {
+            display: block;
+            width: 246px;
+            height: 56px;
+        }
+
+        .btn-ios {
+            background: url(ios_nor.png) no-repeat;
+            margin: 5px 0 25px 0;
+        }
+
+        .btn-ios:hover {
+            background: url(ios_sel.png) no-repeat;
+        }
+
+        .btn-android {
+            background: url(android_nor.png) no-repeat;
+        }
+
+        .btn-android:hover {
+            background: url(android_sel.png) no-repeat;
+        }
+
+        .list_title {
+            color: #666666;
+            font-size: 24px;
+            border-left: 4px solid #6fce2a;
+            padding-left: 15px;
+            height: 24px;
+            line-height: 24px;
+            margin: 53px 0 31px 0;
+            position: relative;
+        }
+
+        .min {
+            font-family: "宋体", serif;
+            margin: 0 0 0 -10px;
+            width: 134px;
+            position: relative;
+        }
+
+        /*焦点图*/
+
+        .banner-right {
+            float: left;
+            margin-left: 275px;
+        }
+
+        .slide {
+            width: 300px;
+            height: 462px;
+            position: relative;
+            margin-top: 58px;
+        }
+
+        .focus {
+            position: relative;
+            width: 137px;
+            height: 462px;
+            z-index: 4;
+        }
+
+        .focus #pic {
+            width: 300px;
+            height: 462px;
+            overflow: hidden;
+        }
+
+        .focus #pic UL {
+            WIDTH: 1500px;
+            FLOAT: left;
+            HEIGHT: 462px;
+        }
+
+        .focus #pic LI {
+            WIDTH: 300px;
+            FLOAT: left;
+            HEIGHT: 462px;
+        }
+
+        .focus #pic LI IMG {
+            WIDTH: 300px;
+            FLOAT: left;
+            HEIGHT: 462px;
+        }
+
+        .focus .tip-bg {
+            Z-INDEX: 5;
+            POSITION: absolute;
+            WIDTH: 300px;
+            BOTTOM: 0;
+            HEIGHT: 27px;
+            LEFT: 0;
+            background: url(bot_background.png) no-repeat center;
+        }
+
+        .focus #tip {
+            Z-INDEX: 6;
+            POSITION: absolute;
+            WIDTH: 110px;
+            BOTTOM: 9px;
+            HEIGHT: 9px;
+            LEFT: 120px;
+        }
+
+        .focus #tip UL LI {
+            MARGIN: 0 5px;
+            WIDTH: 10px;
+            DISPLAY: inline;
+            background: url(bot_nor.png) no-repeat center;
+            FLOAT: left;
+            HEIGHT: 10px;
+            CURSOR: pointer;
+            overflow: hidden
+        }
+
+        .focus #tip UL LI.current {
+            background: url(bot_select.png) no-repeat center;
+        }
+
+        .part01 {
+            padding: 42px 0;
+            background: #fff;
+        }
+
+        .f-summary {
+            width: 1200px;
+            margin: auto;
+            height: 145px;
+            overflow: hidden;
+        }
+
+        .f-summary li {
+            width: 298px;
+            height: 145px;
+            float: left;
+            text-align: center;
+            border-right: solid 1px #eee;
+            font-family: microsoft yahei, serif;
+        }
+
+        .f-summary01 {
+            width: 64px;
+            height: 52px;
+            margin: auto;
+            background: url(sum1.png) center no-repeat;
+        }
+
+        .f-summary02 {
+            width: 53px;
+            height: 52px;
+            margin: auto;
+            background: url(sum2.png) center no-repeat;
+        }
+
+        .f-summary03 {
+            width: 47px;
+            height: 52px;
+            margin: auto;
+            background: url(sum3.png) center no-repeat;
+        }
+
+        .f-summary04 {
+            width: 59px;
+            height: 52px;
+            margin: auto;
+            background: url(sum4.png) center no-repeat;
+        }
+
+        .summary {
+            font-size: 22px;
+            color: #787878;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .summary2 {
+            font-size: 12px;
+            color: #a6a6a6;
+            font-family: microsoft yahei, serif;
+            line-height: 20px;
+        }
+
+        /*题库*/
+
+        .tikuNav .t-item {
+            float: left;
+            height: 310px;
+            width: 260px;
+            margin-right: 53px;
+            margin-bottom: 30px;
+            transition: .2s;
+        }
+
+        .tikuNav .t-item:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translate3d(0, -2px, 0);
+        }
+
+        .tikuNav .t-item .item-top {
+            width: 260px;
+            height: 180px;
+            color: #fff;
+        }
+
+        .tikuNav .item-bottom {
+            padding: 13px;
+            background: #fff;
+            height: 104px;
+        }
+
+        .tikuNav .t-item .item-bottom .item-title {
+            color: #333333;
+            font-size: 16px;
+            position: relative;
+            width: 190px;
+            height: 30px;
+        }
+
+        .tikuNav .t-item .item-bottom .item-title .title-count {
+            color: #6fce2a;
+            font-size: 24px;
+            position: absolute;
+            top: -5px;
+            right: -43px;
+        }
+
+        .tikuNav .t-item .item-bottom .t-count {
+            color: #666666;
+            text-align: center;
+            margin: 15px 0 13px 0;
+        }
+
+        .item-bottom .t-count span {
+            color: #ff9b51;
+        }
+
+        .tikuNav .t-item .item-bottom .t-down .item-down {
+            width: 125px;
+            height: 29px;
+            display: block;
+            border: 1px solid #6fce2a;
+            color: #6fce2a;
+            border-radius: 20px;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 29px;
+            text-align: center;
+        }
+
+        .tikuNav .t-item .item-bottom .t-down .item-down:hover {
+            background: #6fce2a;
+            color: #fff;
+        }
+
+        /*版权*/
+
+        .footer_box {
+            width: 100%;
+            background: #FFFFFF;
+            margin-top: 30px;
+            padding: 15px 0;
+        }
+
+        .footer {
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 26px;
+            color: #a6a6a6;
+            padding-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer a {
+            color: #a0a0a0;
+        }
+
+        /*-------中间弹窗------*/
+
+        .all_box_z1 {
+            width: 100%;
+            overflow: hidden;
+            float: left;
+            display: block;
+            top: 0;
+            position: absolute;
+            z-index: 103;
+            left: 0 !important;
+            *left: 0;
+        }
+
+        * html .all_box_z1 {
+            top: expression(offsetParent.scrollTop+0);
+        }
+
+        .all_box_z {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            background: black \9;
+            filter: alpha(opacity=70) \9;
+        }
+
+        .all_ts {
+            width: 523px;
+            float: left;
+            display: block;
+            position: absolute;
+            z-index: 120;
+            left: 50% !important;
+            *left: 50%;
+            margin-left: -260px;
+            padding: 5px;
+            top: 20%;
+        }
+
+        * html .all_ts {
+            top: expression(offsetParent.scrollTop+200);
+        }
+
+        .text-right {
+            text-align: right;
+            width: 523px;
+            height: 378px;
+        }
+
+        .text-right a {
+            text-decoration: none;
+            float: right;
+            display: block;
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            right: 13px;
+            top: 13px;
+        }
+
+        .kctcxian td {
+            border-bottom: solid 1px #c7d8ea;
+        }
+
+        .all_ts .text-right .saoma {
+            position: absolute;
+            top: 70px;
+            left: 184px;
+        }
+
+        .server {
+            width: 58px;
+            border: 1px solid #eaeaea;
+            background: #fff;
+            position: fixed;
+            right: 3px;
+            top: 30%;
+            z-index: 999;
+        }
+
+        .s-app, .s-wx {
+            height: 45px;
+            padding-top: 13px;
+            display: block;
+        }
+
+        .s-app {
+            border-bottom: 1px solid #eaeaea;
+            padding-top: 3px;
+            font-size: 12px;
+            color: #999999;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .s-app:hover {
+            color: #259fda;
+        }
+
+        .s-app:hover .s-app_pic {
+            background-position: 0 -99px;
+        }
+
+        .s-app_pic, .s-wx_pic {
+            background: url(server.png) no-repeat;
+            width: 36px;
+            height: 30px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .s-app_pic {
+            background-position: 0 -66px;
+        }
+
+        .s-wx_pic {
+            background-position: 3px -31px;
+        }
+
+        .s-wx:hover .s-wx_pic {
+            background-position: 3px -0px;
+        }
+
+        .top {
+            border-top: 1px solid #eaeaea;
+            border-bottom: none;
+            height: 29px;
+            background: #999999;
+            display: block;
+            padding-top: 7px;
+        }
+
+        .top_pic {
+            background: url(server.png) no-repeat 0 -132px;
+            width: 22px;
+            height: 23px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .top:hover {
+            background: #cccccc;
+        }
+
+        .s-wx {
+            position: relative;
+        }
+
+        .s-wx:hover .scan-wx {
+            display: block;
+        }
+
+        .s-wx .scan-wx {
+            position: absolute;
+            background: #fff;
+            padding: 12px 12px 0 12px;
+            cursor: default;
+            right: 77px;
+            top: -59px;
+            display: none;
+        }
+
+        .ewm_text {
+            text-align: center;
+            color: #333333;
+            font-size: 12px;
+            line-height: 15px;
+            padding: 4px 0 7px 0;
+        }
+
+        .ewm_jt {
+            height: 17px;
+            width: 11px;
+            background: url(server.png) no-repeat 0 -158px;
+            position: absolute;
+            right: -11px;
+            top: 80px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="jquery.SuperSlide2.1.js"></script>
+    <script type="text/javascript">
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            if (window.location.href.indexOf("?agent=m") < 0) {
+                try {
+                    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+
+                    } else if (/iPad/i.test(navigator.userAgent)) {
+                    } else {
+
+                    }
+                } catch (e) {
+                }
+            }
+        }
+    </script>
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+<div class="server">
+    <a id="btn-xn-chat" class="s-app" href="#">
+        <span class="s-app_pic"></span>
+        APP
+    </a>
+    <a class="s-wx" href="javascript:;">
+        <span class="s-wx_pic"></span>
+        <div class="scan-wx">
+            <span class="ewm_jt"></span>
+            <img src="scan_wx.gif" height="100" width="100">
+            <div class="ewm_text">微信扫一扫<br>关注公众号</div>
+        </div>
+    </a>
+    <a id="btn-r-top" style="display: none;" class="top" href="javascript:;">
+        <span class="top_pic"></span>
+    </a>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var $btnRTop = $("#btn-r-top");
+        var $window = $(window);
+        $('#btn-xn-chat').on("click", function () {
+
+        });
+        $btnRTop.on("click", function () {
+            $('body, html').animate({scrollTop: 0}, 100);
+        });
+        $window.on("scroll", function () {
+            if ($(this).scrollTop() > 100) {
+                $btnRTop.show();
+            } else {
+                $btnRTop.hide();
+            }
+        })
+    });
+</script>
+<div class="header">
+    <div class="con">
+        <div class="fl">
+            <div class="yuekaoti">
+                <a href=""><img height="45" width="120" alt="" src="logo.png"></a>
+            </div>
+        </div>
+        <div class="header-right">
+            <a target="_black" href="index.html" style="margin-right: 30px;pointer-events:none;color:#55bbdd;">首页</a>
+            <a target="_black" href="#tz-title" title="" style="margin-right: 40px;">APP下载</a>
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+    <div class="clear"></div>
+</div>
+<div class="banner">
+    <div class="con">
+        <div class="banner-left">
+            <div class="left_l">
+                <div class="ewm">
+                    <img src="scan_img.png" width="100"
+                         height="100">
+                    <div class="sys">扫一扫下载 APP</div>
+                </div>
+                <div class="min">
+                </div>
+            </div>
+            <div class="btn">
+                <a class="btn-ios" target="_blank" href="#"></a>
+                <a class="btn-android" href="#"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="banner-right">
+            <div class="slide">
+                <div class="focus">
+                    <div id="pic">
+                        <div class="tempWrap" style="overflow:hidden; position:relative; width:298px">
+                            <ul>
+                                <li><img src="1.png" width="298" height="424" alt=""/></li>
+                                <li><img src="2.png" width="298" height="424" alt=""/></li>
+                                <li><img src="3.png" width="298" height="424" alt=""/></li>
+                                <li><img src="4.png" width="298" height="424" alt=""/></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tip-bg"></div>
+                    <div id="tip">
+                        <ul>
+                            <li class=""><a></a></li>
+                            <li class=""><a></a></li>
+                            <li class=""><a></a></li>
+                            <li class="current"><a></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/09/23/hello-world/" class="article-date">
-  <time datetime="2018-09-23T01:56:38.233Z" itemprop="datePublished">2018-09-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
+</div>
+<div class="part01">
+    <div class="f-summary">
+        <ul>
+            <li>
+                <div class="f-summary01"></div>
+                <div class="summary">背题</div>
+                <div class="summary2">
+                    齐全专业的考题<br>
+                    国局原题效率高
+                </div>
+            </li>
+            <li>
+                <div class="f-summary02"></div>
+                <div class="summary">模拟</div>
+                <div class="summary2">
+                    智能模拟机考<br>
+                    刷题考好成绩
+                </div>
+            </li>
+            <li>
+                <div class="f-summary03"></div>
+                <div class="summary">统计</div>
+                <div class="summary2">
+                    智能评估成绩<br>
+                    精确预测考分
+                </div>
+            </li>
+            <li style="border:none;">
+                <div class="f-summary04"></div>
+                <div class="summary">视频</div>
+                <div class="summary2">
+                    精彩搞笑视频<br>
+                    轻松劳逸结合
+                </div>
+            </li>
+        </ul>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/23/hello-world/" data-id="cjme94yd40000wotew9sho3k1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li></ul>
+</div>
+<div class="con">
+    <div class="list_title" id="tz-title">事业单位题库</div>
+    <div class="tikuNav">
+        <div class="t-item">
+            <div class="item-top">
+                <img src="716.png" width="260" height="180"/>
+            </div>
+            <div class="item-bottom">
+                <div class="item-title">总题数
+                    <div class="title-count">132654</div>
+                </div>
+                <div class="t-count">已有<span>132654</span>人做题</div>
+                <div class="t-down">
+                    <a class="item-down" onclick="ShowDivTiku(1);" href="javascript:void(0)">马上练习</a>
+                </div>
+            </div>
+        </div>
+        <div class="t-item">
+            <div class="item-top">
+                <img src="717.png" width="260" height="180"/>
+            </div>
+            <div class="item-bottom">
+                <div class="item-title">总题数
+                    <div class="title-count">1376</div>
+                </div>
+                <div class="t-count">已有<span>1376</span>人做题</div>
+                <div class="t-down"><a class="item-down" onclick="ShowDivTiku(1);" href="javascript:void(0)">马上练习</a>
+                </div>
+            </div>
+        </div>
+        <div class="t-item">
+            <div class="item-top">
+                <img src="718.png" width="260" height="180"/></div>
+            <div class="item-bottom">
+                <div class="item-title">总题数
+                    <div class="title-count">238304</div>
+                </div>
+                <div class="t-count">已有<span>238304</span>人做题</div>
+                <div class="t-down"><a class="item-down" onclick="ShowDivTiku(1);" href="javascript:void(0)">马上练习</a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
-  </div>
+</div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/09/23/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
+<div class="footer_box">
+    <div class="footer">
+        Copyright © 2011-
+        <script language="JavaScript">
+            document.write(new Date().getFullYear());
+        </script>
+        <a href="">网站声明</a>　|　
+        <a href="">联系方式</a>　|　
+        <a href="">帮助中心</a>　|　
+        <a href="">加入我们</a>
     </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+</div>
+<!--弹窗部分-->
+<div class="all_box_z1" style="display:none;">
+    <div class="all_box_z" style="display:none;"></div>
+</div>
+<div id="tiku" class="all_ts" style="display: none;">
+    <div class="text-right">
+        <a href="javascript:void(0)" onclick="closeDiglog()">
+            <img src="close.gif" width="25" height="24">
+        </a>
+        <img src="tc2.png" width="523" height="378">
+        <div class="saoma">
+            <img src="scan_img.png" width="153" height="153">
+        </div>
     </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
+</div>
+<script type="text/javascript">
+    //锁屏
+    $(function () {
+        $(".slide .focus").slide({
+            titCell: "#tip ul",
+            mainCell: "#pic ul",
+            autoPage: "<li><a></a></li>",
+            effect: "left",
+            autoPlay: true,
+            vis: 1,
+            titOnClassName: "current",
+            trigger: "click"
+        });
+        var winHeight;
+        if (window.innerHeight) {
+            winHeight = window.innerHeight;
+        } else if ((document.body) && (document.body.clientHeight)) {
+            winHeight = document.body.clientHeight;
+        }
+        $(".all_box_z1").css({height: winHeight});
+        $(".all_box_z").css({height: winHeight})
+    })
+    function closeDiglog() {
+        $(".all_box_z1").hide();
+        $(".all_box_z").show();
+        $(".all_ts").hide();
+        for (var i = 0; i < 6; i++) {
+            $("#kc" + i).hide();
+        }
+    }
+    function ShowDivTiku(id) {
+        $(".all_box_z1").show();
+        $(".all_box_z").show();
+        $("#tiku").show();
+    }
+</script>
 </body>
 </html>
